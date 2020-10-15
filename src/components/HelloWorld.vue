@@ -1,8 +1,8 @@
 <template>
   <div>
     <p>{{refss.a}}</p>
-    <textarea  v-model="refss.a">
-    <button :refs="refs">按钮</button>
+    <textarea  v-model="refss.a"/>
+    <p ref="refs">按钮</p>
   </div>
 </template>
 
