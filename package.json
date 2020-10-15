@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build"
   },
+  "homepage": "https://eug620.github.io/vite-app",
   "dependencies": {
     "vue": "^3.0.0-rc.1"
   },
