@@ -1,80 +1,81 @@
 {
-  "name": "vite-vue",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
-  "homepage": "https://eug620.github.io/vite-app",
-  "dependencies": {
-    "vue": "^3.0.0-rc.1"
-  },
-  "engines": {
-    "node": ">=11.7.0"
-  },
-  "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-rc.1",
-    "vite": "^1.0.0-rc.1"
-  },
-  "browserslist": {
-    "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
-    ],
-    "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
-    ]
-  },
-  "jest": {
-      "roots": [
-          "<rootDir>/src"
-      ],
-      "collectCoverageFrom": [
-          "src/**/*.{js,jsx,ts,tsx}",
-          "!src/**/*.d.ts"
-      ],
-      "setupFiles": [
-          "react-app-polyfill/jsdom"
-      ],
-      "setupFilesAfterEnv": [],
-      "testMatch": [
-          "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-          "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-      ],
-      "testEnvironment": "jest-environment-jsdom-fourteen",
-      "transform": {
-          "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-          "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-          "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-      },
-      "transformIgnorePatterns": [
-          "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-          "^.+\\.module\\.(css|sass|scss)$"
-      ],
-      "modulePaths": [],
-      "moduleNameMapper": {
-          "^react-native$": "react-native-web",
-          "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-      },
-      "moduleFileExtensions": [
-          "web.js",
-          "js",
-          "web.ts",
-          "ts",
-          "web.tsx",
-          "tsx",
-          "json",
-          "web.jsx",
-          "jsx",
-          "node"
-      ],
-      "watchPlugins": [
-          "jest-watch-typeahead/filename",
-          "jest-watch-typeahead/testname"
-      ]
-  }
+    "name": "vite-vue",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "homepage": "https://eug620.github.io/vite-app",
+    "dependencies": {
+        "vue": "^3.0.0-rc.1",
+        "vue-router": "4.0.0-beta.13"
+    },
+    "engines": {
+        "node": ">=11.7.0"
+    },
+    "devDependencies": {
+        "@vue/compiler-sfc": "^3.0.0-rc.1",
+        "vite": "^1.0.0-rc.1"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.d.ts"
+        ],
+        "setupFiles": [
+            "react-app-polyfill/jsdom"
+        ],
+        "setupFilesAfterEnv": [],
+        "testMatch": [
+            "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+            "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+        ],
+        "testEnvironment": "jest-environment-jsdom-fourteen",
+        "transform": {
+            "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+            "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+            "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+        },
+        "transformIgnorePatterns": [
+            "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
+            "^.+\\.module\\.(css|sass|scss)$"
+        ],
+        "modulePaths": [],
+        "moduleNameMapper": {
+            "^react-native$": "react-native-web",
+            "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+        },
+        "moduleFileExtensions": [
+            "web.js",
+            "js",
+            "web.ts",
+            "ts",
+            "web.tsx",
+            "tsx",
+            "json",
+            "web.jsx",
+            "jsx",
+            "node"
+        ],
+        "watchPlugins": [
+            "jest-watch-typeahead/filename",
+            "jest-watch-typeahead/testname"
+        ]
+    }
 }
