@@ -13,7 +13,7 @@ jobs:
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@master
       env:
-        VITE_SECRETS: ${{ secrets.VITE_SECRETS }}
+        ACCESS_TOKEN: ${{ secrets.VITE_SECRETS }}
         BRANCH: gh-pages
         FOLDER: build
         BUILD_SCRIPT: yarn && yarn build
