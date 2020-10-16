@@ -8,6 +8,7 @@
     },
     "homepage": "https://eug620.github.io/vite-app",
     "dependencies": {
+        "ant-design-vue": "2.0.0-beta.10",
         "vue": "^3.0.0-rc.1",
         "vue-router": "4.0.0-beta.13"
     },
