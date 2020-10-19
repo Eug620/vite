@@ -1,17 +1,17 @@
-<!--
- * @Author: yeyuhang
- * @Date: 2020-10-15 19:18:02
- * @LastEditTime: 2020-10-15 19:19:26
- * @LastEditors: yeyuhang
- * @Descripttion: 头部注释
--->
 <template>
-  <div>about</div>
+  <div>
+    about
+    <eug-card>
+      <template #header>header</template>
+      <template #extra>extra</template>
+      <template #description>description</template>
+      <template #content>content</template>
+    </eug-card>
+  </div>
 </template>
 
 <script>
 export default {
-
 }
 </script>
 

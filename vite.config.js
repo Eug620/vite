@@ -6,7 +6,7 @@ console.log(path.resolve(__dirname, './src'))
 module.exports = {
   // 引入第三方的配置
   optimizeDeps: {
-    include: ["moment", "echarts", "axios", "mockjs"]
+    include: []
   },
   alias: {
     // 键必须以斜线开始和结束
