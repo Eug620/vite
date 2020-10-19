@@ -1,3 +1,10 @@
+<!--
+ * @Author: yeyuhang
+ * @Date: 2020-10-19 18:37:30
+ * @LastEditTime: 2020-10-19 19:01:49
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+-->
 <template>
   <a-layout id="components-layout-demo-responsive">
     <a-layout-sider
@@ -12,25 +19,13 @@
           <a-icon type="user" />
           <span class="nav-text">nav 1</span>
         </a-menu-item>
-        <a-menu-item key="2">
-          <a-icon type="video-camera" />
-          <span class="nav-text">nav 2</span>
-        </a-menu-item>
-        <a-menu-item key="3">
-          <a-icon type="upload" />
-          <span class="nav-text">nav 3</span>
-        </a-menu-item>
-        <a-menu-item key="4">
-          <a-icon type="user" />
-          <span class="nav-text">nav 4</span>
-        </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
       <a-layout-header :style="{ background: '#fff', padding: 0 }" />
       <a-layout-content :style="{ margin: '24px 16px 0' }">
         <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
-          content
+          <router-view></router-view>
         </div>
       </a-layout-content>
       <a-layout-footer style="textAlign: center">
@@ -40,15 +35,32 @@
   </a-layout>
 </template>
 <script>
+import { RouterView } from "vue-router";
 export default {
-  methods: {
-    onCollapse(collapsed, type) {
-      console.log(collapsed, type);
-    },
-    onBreakpoint(broken) {
-      console.log(broken);
-    },
+  name: 'home',
+  components: {
+    RouterView
   },
+  setup () {
+    const onCollapse = () => {
+
+    }
+    const onBreakpoint = () => {
+        
+    }
+    return {
+      onCollapse,
+      onBreakpoint
+    }
+  }
+  // methods: {
+  //   onCollapse(collapsed, type) {
+  //     console.log(collapsed, type);
+  //   },
+  //   onBreakpoint(broken) {
+  //     console.log(broken);
+  //   },
+  // },
 };
 </script>
 
