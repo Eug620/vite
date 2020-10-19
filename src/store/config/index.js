@@ -7,7 +7,9 @@
  */
 export default {
   state: {
-    ROUTER_LIST:[
+    ROUTER_LIST: [
+      'Composition-API',
+      'Reactivity-API',
       'page1',
       'page2'
     ]

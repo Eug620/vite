@@ -14,10 +14,11 @@
       @breakpoint="onBreakpoint"
     >
       <div class="logo" />
-      <a-menu theme="dark" mode="inline" :default-selected-keys="['4']">
-        <a-menu-item key="1">
-          <a-icon type="user" />
-          <span class="nav-text">nav 1</span>
+      <a-menu theme="dark" mode="inline" @click="useHandleMenuClick" @select="useHandleMenuSelect">
+        <a-menu-item :key="item" v-for="item in ROUTER_LIST">
+          <GithubOutlined />
+          <!-- {{item}} -->
+          <router-link :to="item"/>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
@@ -35,22 +36,28 @@
   </a-layout>
 </template>
 <script>
-import { RouterView } from "vue-router";
+import { toRefs, onMounted } from 'vue'
+import { RouterView, RouterLink } from "vue-router"
+import { GithubOutlined } from '@ant-design/icons-vue'
+import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect } from './index.js'
 export default {
   name: 'home',
   components: {
-    RouterView
+    RouterLink,
+    RouterView,
+    GithubOutlined
   },
   setup () {
-    const onCollapse = () => {
-
-    }
-    const onBreakpoint = () => {
-        
-    }
+    const state = useState()
+    onMounted(() => {
+      console.log(state.store)
+    })
     return {
+      ...toRefs(state),
       onCollapse,
-      onBreakpoint
+      onBreakpoint,
+      useHandleMenuClick,
+      useHandleMenuSelect
     }
   }
   // methods: {

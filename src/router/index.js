@@ -16,19 +16,21 @@ const routes = [
     path:'/',
     name:'layout',
     component:layout,
+    redirect: 'Composition-API',
     children:[
       {
-        path: 'page1',
-        name: 'page1',
-        component: import('../views/pages/page1/index.vue')
+        path: 'Composition-API',
+        name: 'Composition-API',
+        component: import('../views/pages/Composition-API/index.vue')
       },
       {
-        path: 'page2',
-        name: 'page2',
-        component: import('../views/pages/page2/index.vue')
+        path: 'Reactivity-API',
+        name: 'Reactivity-API',
+        component: import('../views/pages/Reactivity-API/index.vue')
       }
     ]
-  }
+  },
+  { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/Composition-API' } // 找不到路径，重定向到首页
 ]
   
 const router = createRouter({
