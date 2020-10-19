@@ -2,8 +2,8 @@
   <div>
     about
     <eug-card>
-      <template #header>header</template>
-      <template #extra>extra</template>
+      <template #header>Composition API</template>
+      <template #extra><a href="https://v3.vuejs.org/api/composition-api.html"><LinkOutlined /></a></template>
       <template #description>description</template>
       <template #content>content</template>
     </eug-card>
@@ -11,7 +11,11 @@
 </template>
 
 <script>
+import { LinkOutlined } from "@ant-design/icons-vue";
 export default {
+  components: { 
+    LinkOutlined
+  }
 }
 </script>
 
