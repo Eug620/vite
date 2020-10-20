@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-19 19:01:49
+ * @LastEditTime: 2020-10-20 18:06:00
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -14,8 +14,8 @@
       @breakpoint="onBreakpoint"
     >
       <div class="logo" />
-      <a-menu theme="dark" mode="inline" @click="useHandleMenuClick" @select="useHandleMenuSelect">
-        <a-menu-item :key="item" v-for="item in ROUTER_LIST">
+      <a-menu theme="dark" mode="inline" :defaultSelectedKeys="activedMenu" @select="useHandleMenuSelect">
+        <a-menu-item :key="item" v-for="item in ROUTER_LIST" :title="item">
           <GithubOutlined />
           <!-- {{item}} -->
           <router-link :to="item"/>
@@ -36,10 +36,10 @@
   </a-layout>
 </template>
 <script>
-import { toRefs, onMounted } from 'vue'
-import { RouterView, RouterLink } from "vue-router"
+import { toRefs, onMounted, watch } from 'vue'
+import { RouterView, RouterLink, useRoute } from "vue-router"
 import { GithubOutlined } from '@ant-design/icons-vue'
-import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect } from './index.js'
+import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect, useRouteConfig } from './index.js'
 export default {
   name: 'home',
   components: {
@@ -47,10 +47,11 @@ export default {
     RouterView,
     GithubOutlined
   },
-  setup () {
+  setup (_, ctx) {
     const state = useState()
+    useRouteConfig(_, ctx, state)
     onMounted(() => {
-      console.log(state.store)
+      console.log('onMounted')
     })
     return {
       ...toRefs(state),
