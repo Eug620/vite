@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-21 14:27:44
+ * @LastEditTime: 2020-10-21 17:06:56
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -23,31 +23,49 @@
       </a-menu>
     </a-layout-sider>
     <a-layout>
-      <a-layout-header :style="{ background: '#fff', padding: 0 }" />
-      <a-layout-content :style="{ margin: '24px 16px 0' }">
-        <eug-card>
+      <a-layout-header :style="{ background: '#fff', padding: 0 }">
+        <a-row class="eug-layout-header">
+          <a-col :span="12" :offset="0">
+            <a-breadcrumb>
+              <a-breadcrumb-item href="/">
+                <home-outlined />
+              </a-breadcrumb-item>
+              <a-breadcrumb-item href="activedMenu[0]">
+                <span>{{activedMenu[0].replace('/', '')}}</span>
+              </a-breadcrumb-item>
+              <a-breadcrumb-item>
+                Application
+              </a-breadcrumb-item>
+            </a-breadcrumb>
+          </a-col>
+        </a-row>
+      </a-layout-header>
+      <a-layout-content :style="{ margin: '10px' }">
+        <eug-card bordered :style="{ height: '100%' }">
           <template #content>
             <router-view></router-view>
           </template>
         </eug-card>
       </a-layout-content>
       <a-layout-footer style="textAlign: center">
-        Ant Design ©2018 Created by Ant UED
+        <!-- Vue3 + vite + Antd -->
+        TEST
       </a-layout-footer>
     </a-layout>
   </a-layout>
 </template>
 <script>
 import { toRefs, onMounted, watch } from 'vue'
-import { RouterView, RouterLink, useRoute } from "vue-router"
-import { GithubOutlined } from '@ant-design/icons-vue'
+import { RouterView, RouterLink, useRoute } from 'vue-router'
+import { GithubOutlined, HomeOutlined } from '@ant-design/icons-vue'
 import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect, useRouteConfig } from './index.js'
 export default {
   name: 'home',
   components: {
     RouterLink,
     RouterView,
-    GithubOutlined
+    GithubOutlined,
+    HomeOutlined
   },
   setup (_, ctx) {
     const state = useState()
@@ -63,24 +81,9 @@ export default {
       useHandleMenuSelect
     }
   }
-  // methods: {
-  //   onCollapse(collapsed, type) {
-  //     console.log(collapsed, type);
-  //   },
-  //   onBreakpoint(broken) {
-  //     console.log(broken);
-  //   },
-  // },
-};
+}
 </script>
 
-<style>
-#components-layout-demo-responsive .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
-}
-#components-layout-demo-responsive {
-  height: 100%;
-}
+<style  lang="scss">
+@import './index.scss'
 </style>

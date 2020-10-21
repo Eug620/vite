@@ -4,9 +4,9 @@ import { useRoute, useRouter } from "vue-router"
 export const useState = () => {
   const state = reactive({
       store: useStore(),
+      router: useRouter(),
       ROUTER_LIST: [],
-      activedMenu: [],
-      router: useRouter()
+      activedMenu: []
   })
   const router = useRouter()
   const { path } = router.currentRoute.value
@@ -27,7 +27,7 @@ export const useHandleMenuClick = ({ item, key, keyPath }) => {
   // console.log( item, key, keyPath );
 }
 export const useHandleMenuSelect = ({ item, key, selectedKeys }) => {
-  console.log({ item, key, selectedKeys });
+  // console.log({ item, key, selectedKeys });
 }
 export const onCollapse = () => {
 
