@@ -1,12 +1,12 @@
 <!--
  * @Author: yeyuhang
- * @Date: 2020-10-19 18:43:13
- * @LastEditTime: 2020-10-19 18:43:19
+ * @Date: 2020-10-21 12:26:11
+ * @LastEditTime: 2020-10-21 12:26:16
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 <template>
-  <div>page2</div>
+  <div>Directives</div>
 </template>
 
 <script>

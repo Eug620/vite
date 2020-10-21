@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-20 18:06:00
+ * @LastEditTime: 2020-10-21 12:51:12
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -15,10 +15,10 @@
     >
       <div class="logo" />
       <a-menu theme="dark" mode="inline" :defaultSelectedKeys="activedMenu" @select="useHandleMenuSelect">
-        <a-menu-item :key="item" v-for="item in ROUTER_LIST" :title="item">
-          <GithubOutlined />
-          <!-- {{item}} -->
-          <router-link :to="item"/>
+        <a-menu-item :key="item.name" v-for="item in ROUTER_LIST" :title="item.name">
+          <!-- <GithubOutlined /> -->
+          {{item.name}}
+          <router-link :to="'/' + item.path"/>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>

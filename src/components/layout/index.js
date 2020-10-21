@@ -1,13 +1,13 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-20 10:17:40
- * @LastEditTime: 2020-10-20 18:07:56
+ * @LastEditTime: 2020-10-21 12:50:13
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
 import { reactive, watch } from "vue"
 import { useStore } from 'vuex'
-import { useRoute } from "vue-router"
+import { useRoute, useRouter } from "vue-router"
 export const useState = () => {
     const state = reactive({
         count: 1,
@@ -20,6 +20,8 @@ export const useState = () => {
         activedMenu: ['/Composition-API']
     })
     const route = useRoute()
+    const router = useRouter()
+    state.ROUTER_LIST = router.options.routes[0].children
     state.activedMenu = [route.path]
     return state
 }
