@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-21 12:51:12
+ * @LastEditTime: 2020-10-21 14:27:44
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -15,19 +15,21 @@
     >
       <div class="logo" />
       <a-menu theme="dark" mode="inline" :defaultSelectedKeys="activedMenu" @select="useHandleMenuSelect">
-        <a-menu-item :key="item.name" v-for="item in ROUTER_LIST" :title="item.name">
+        <a-menu-item :key="item.path" v-for="item in ROUTER_LIST" :title="item.name">
           <!-- <GithubOutlined /> -->
           {{item.name}}
-          <router-link :to="'/' + item.path"/>
+          <router-link :to="item.path"/>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout>
       <a-layout-header :style="{ background: '#fff', padding: 0 }" />
       <a-layout-content :style="{ margin: '24px 16px 0' }">
-        <div :style="{ padding: '24px', background: '#fff', minHeight: '360px' }">
-          <router-view></router-view>
-        </div>
+        <eug-card>
+          <template #content>
+            <router-view></router-view>
+          </template>
+        </eug-card>
       </a-layout-content>
       <a-layout-footer style="textAlign: center">
         Ant Design ©2018 Created by Ant UED

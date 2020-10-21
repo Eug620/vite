@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-15 19:12:09
- * @LastEditTime: 2020-10-21 12:38:29
+ * @LastEditTime: 2020-10-21 14:06:12
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -27,7 +27,7 @@ const routes = [
     path:'/',
     name:'layout',
     component:layout,
-    redirect: 'Composition-API',
+    redirect: 'Application-Config',
     children:[
       {
         path: 'Application-Config',
@@ -78,7 +78,7 @@ const routes = [
       }
     ]
   },
-  { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/Composition-API' } // 找不到路径，重定向到首页
+  { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/' } // 找不到路径，重定向到首页
 ]
   
 const router = createRouter({
@@ -86,7 +86,7 @@ const router = createRouter({
   history: createWebHashHistory(), // hash
   routes,
   scrollBehavior (to, from, savedPosition) {
-    console.log(to, from, savedPosition);
+    // console.log(to, from, savedPosition);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve({ left: 0, top: 0 })
