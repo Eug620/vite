@@ -1,15 +1,13 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 12:07:42
- * @LastEditTime: 2020-10-21 16:22:43
+ * @LastEditTime: 2020-10-21 17:31:42
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 
 <template>
   <a-card class="eug-card-box" :bordered="bordered" :hoverable="hoverable">
-    {{bordered}}
-    {{hoverable}}
     <template v-slot:title>
       <slot name="header"/>
     </template>

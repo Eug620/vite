@@ -1,14 +1,17 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-21 17:06:56
+ * @LastEditTime: 2020-10-21 17:36:20
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 <template>
   <a-layout id="components-layout-demo-responsive">
     <a-layout-sider
+      :collapsed="collapsed"
+      :trigger="null"
       breakpoint="lg"
+      collapsible
       collapsed-width="0"
       @collapse="onCollapse"
       @breakpoint="onBreakpoint"
@@ -25,7 +28,15 @@
     <a-layout>
       <a-layout-header :style="{ background: '#fff', padding: 0 }">
         <a-row class="eug-layout-header">
-          <a-col :span="12" :offset="0">
+          <a-col :span="2" :offset="0">
+             <menu-unfold-outlined
+                v-if="collapsed"
+                class="trigger"
+                @click="() => (collapsed = !collapsed)"
+              />
+              <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
+          </a-col>
+          <a-col :span="6" :offset="0" class="eug-layout-header-msg">
             <a-breadcrumb>
               <a-breadcrumb-item href="/">
                 <home-outlined />
@@ -57,7 +68,7 @@
 <script>
 import { toRefs, onMounted, watch } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
-import { GithubOutlined, HomeOutlined } from '@ant-design/icons-vue'
+import { GithubOutlined, HomeOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
 import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect, useRouteConfig } from './index.js'
 export default {
   name: 'home',
@@ -65,7 +76,9 @@ export default {
     RouterLink,
     RouterView,
     GithubOutlined,
-    HomeOutlined
+    HomeOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined
   },
   setup (_, ctx) {
     const state = useState()

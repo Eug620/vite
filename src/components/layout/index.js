@@ -6,7 +6,8 @@ export const useState = () => {
       store: useStore(),
       router: useRouter(),
       ROUTER_LIST: [],
-      activedMenu: []
+      activedMenu: [],
+      collapsed: true
   })
   const router = useRouter()
   const { path } = router.currentRoute.value

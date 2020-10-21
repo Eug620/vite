@@ -7,5 +7,9 @@
     height: 100%;
   }
   .eug-layout-header {
-    margin-top: 21px;
+    // margin-top: 21px;
+    &-msg{
+      text-align: left;
+      padding-top: 20px;
+    }
   }
