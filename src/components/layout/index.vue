@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-21 17:36:20
+ * @LastEditTime: 2020-10-22 14:30:59
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -43,9 +43,6 @@
               </a-breadcrumb-item>
               <a-breadcrumb-item href="activedMenu[0]">
                 <span>{{activedMenu[0].replace('/', '')}}</span>
-              </a-breadcrumb-item>
-              <a-breadcrumb-item>
-                Application
               </a-breadcrumb-item>
             </a-breadcrumb>
           </a-col>

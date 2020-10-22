@@ -1,18 +1,18 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 12:07:42
- * @LastEditTime: 2020-10-21 17:31:42
+ * @LastEditTime: 2020-10-22 16:43:10
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 
 <template>
   <a-card class="eug-card-box" :bordered="bordered" :hoverable="hoverable">
-    <template v-slot:title>
-      <slot name="header"/>
+    <template v-slot:title v-if="showHeader">
+      {{ header }}
     </template>
-    <template v-slot:extra>
-      <slot name="extra"/>
+    <template v-slot:extra v-if="showExtra">
+      <a :href="extra" target="_blank"><eug-icon-link/></a>
     </template>
     <slot name="description"/><br>
     <slot name="content"/>
@@ -31,6 +31,22 @@ export default {
     hoverable: {
       type: Boolean,
       default: false
+    },
+    showHeader: {
+      type: Boolean,
+      default: false
+    },
+    header: {
+      type: String,
+      default: '默认标题'
+    },
+    showExtra: {
+      type: Boolean,
+      default: false
+    },
+    extra: {
+      type: String,
+      default: ''
     }
   },
   setup(_, ctx) {

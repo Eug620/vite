@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-15 19:12:09
- * @LastEditTime: 2020-10-21 14:06:12
+ * @LastEditTime: 2020-10-22 16:54:45
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -19,8 +19,6 @@ import SpecialAttributes from '../views/pages/Special-Attributes/index.vue'
 import BuiltInComponents from '../views/pages/Built-In-Components/index.vue'
 import ReactivityAPI from '../views/pages/Reactivity-API/index.vue'
 import CompositionAPI from '../views/pages/Composition-API/index.vue'
-const vm = getCurrentInstance()
-console.log(vm);
 
 const routes = [
   {
@@ -82,8 +80,8 @@ const routes = [
 ]
   
 const router = createRouter({
-  // history: createWebHistory(),
-  history: createWebHashHistory(), // hash
+  history: createWebHistory(),
+  // history: createWebHashHistory(), // hash
   routes,
   scrollBehavior (to, from, savedPosition) {
     // console.log(to, from, savedPosition);
