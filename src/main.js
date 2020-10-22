@@ -12,7 +12,7 @@ import Store from './store'
 import Antd from 'ant-design-vue'
 // import Antd from '../../../@modules/ant-design-vue'
 // import  'ant-design-vue/dist/antd.css'
-import  '../../../@modules/ant-design-vue/dist/antd.css'
+import  'ant-design-vue/dist/antd.css'
 import './index.css'
 import useComponents from './views/components'
 const app = createApp(App)
