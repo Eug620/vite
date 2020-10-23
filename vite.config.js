@@ -1,3 +1,10 @@
+/*
+ * @Author: yeyuhang
+ * @Date: 2020-10-23 10:28:54
+ * @LastEditTime: 2020-10-23 11:14:35
+ * @LastEditors: yeyuhang
+ * @Descripttion: 头部注释
+ */
 const path = require('path')
 // vite.config.js # or vite.config.ts
 
@@ -22,5 +29,7 @@ module.exports = {
     //   changeOrigin: true,
     //   // rewrite: path => path.replace(/^\/lsbdb/, '')
     // }
-  }
+  },
+  base: './',
+  outDir: 'assets'
 }
