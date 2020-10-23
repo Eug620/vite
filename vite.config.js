@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-23 10:28:54
- * @LastEditTime: 2020-10-23 11:17:36
+ * @LastEditTime: 2020-10-23 11:28:22
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -30,5 +30,5 @@ module.exports = {
     //   // rewrite: path => path.replace(/^\/lsbdb/, '')
     // }
   },
-  base: './'
+  base: './vite'
 }
