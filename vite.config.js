@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-23 10:28:54
- * @LastEditTime: 2020-10-23 11:34:12
+ * @LastEditTime: 2020-10-23 11:36:40
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -31,5 +31,5 @@ module.exports = {
     // }
   },
   base: './',
-  outDir: './'
+  assetsDir: 'assets'
 }
