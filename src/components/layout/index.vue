@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-22 14:30:59
+ * @LastEditTime: 2020-10-23 15:10:46
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -36,7 +36,7 @@
               />
               <menu-fold-outlined v-else class="trigger" @click="() => (collapsed = !collapsed)" />
           </a-col>
-          <a-col :span="6" :offset="0" class="eug-layout-header-msg">
+          <a-col :span="22" :offset="0" class="eug-layout-header-msg">
             <a-breadcrumb>
               <a-breadcrumb-item href="/">
                 <home-outlined />
@@ -49,11 +49,7 @@
         </a-row>
       </a-layout-header>
       <a-layout-content :style="{ margin: '10px' }">
-        <eug-card bordered :style="{ height: '100%' }">
-          <template #content>
-            <router-view></router-view>
-          </template>
-        </eug-card>
+        <router-view></router-view>
       </a-layout-content>
       <a-layout-footer style="textAlign: center">
         <!-- Vue3 + vite + Antd -->
@@ -80,9 +76,9 @@ export default {
   setup (_, ctx) {
     const state = useState()
     useRouteConfig(_, ctx, state)
-    onMounted(() => {
-      console.log('onMounted')
-    })
+    // onMounted(() => {
+    //   console.log('onMounted')
+    // })
     return {
       ...toRefs(state),
       onCollapse,

@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-15 19:12:09
- * @LastEditTime: 2020-10-23 10:32:13
+ * @LastEditTime: 2020-10-23 14:33:30
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -80,8 +80,8 @@ const routes = [
 ]
   
 const router = createRouter({
-  // history: createWebHistory(),
-  history: createWebHashHistory(), // hash
+  history: createWebHistory(),
+  // history: createWebHashHistory(), // hash
   routes,
   scrollBehavior (to, from, savedPosition) {
     // console.log(to, from, savedPosition);

@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-22 15:41:36
- * @LastEditTime: 2020-10-22 16:52:16
+ * @LastEditTime: 2020-10-23 14:26:41
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -16,5 +16,5 @@ export const useState = () => {
 
 export const useEmitSetup = (emit) => {
     console.log('触发emit')
-    emit('useChangeSetup', '通过emit更改了prop传入的值')
+    emit('useChangeSetup', 'Hello, Composition-API!!! --- from  setup')
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-22 14:31:41
- * @LastEditTime: 2020-10-22 16:56:02
+ * @LastEditTime: 2020-10-23 14:26:08
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -17,7 +17,7 @@ export const useState = () => {
             'Provide / Inject',
             'getCurrentInstance'
         ],
-        setupProps: 'Hello, setup!!! --- from C'
+        setupProps: 'Hello, setup!!! --- from Composition-API'
     })
     return state
 }
