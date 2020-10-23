@@ -1,4 +1,4 @@
-name: vite-app Demo
+name: vite Demo
 on:
   push:
     branches:

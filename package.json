@@ -1,12 +1,12 @@
 {
-    "name": "vite-vue",
+    "name": "vite",
     "version": "0.0.0",
     "private": true,
     "scripts": {
         "dev": "vite",
         "build": "vite build"
     },
-    "homepage": "https://eug620.github.io/vite-app",
+    "homepage": "https://eug620.github.io/vite",
     "dependencies": {
         "@ant-design/icons-vue": "^5.1.5",
         "ant-design-vue": "2.0.0-beta.10",
