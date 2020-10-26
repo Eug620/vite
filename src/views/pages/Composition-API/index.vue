@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-20 10:17:40
- * @LastEditTime: 2020-10-23 15:04:48
+ * @LastEditTime: 2020-10-26 16:32:34
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -15,12 +15,10 @@
         <!-- description -->
       </template>
       <template #content>
-        <a-space direction="vertical">
-          <setup :id="itemList[0]" :setupProps="setupProps" @useChangeSetup="(val)=>useChangeSetup(state,val)"/>
-          <lifecycle-hooks :id="itemList[1]"/>
-          <provide-inject :id="itemList[2]"/>
-          <get-current-instance :id="itemList[3]"/>
-        </a-space>
+        <setup :id="itemList[0]" :setupProps="setupProps" @useChangeSetup="(val)=>useChangeSetup(state,val)"/>
+        <lifecycle-hooks :id="itemList[1]"/>
+        <provide-inject :id="itemList[2]"/>
+        <get-current-instance :id="itemList[3]"/>
       </template>
     </eug-card>
     <!-- 锚点 -->
