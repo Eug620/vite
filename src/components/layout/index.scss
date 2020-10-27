@@ -1,7 +1,11 @@
 #components-layout-demo-responsive .logo {
     height: 32px;
-    background: rgba(255, 255, 255, 0.2);
+    // background: rgba(255, 255, 255, 0.2);
+    background-color: #fff;
     margin: 16px;
+  }
+  .ant-layout-sider{
+    background-color: #fff;
   }
   #components-layout-demo-responsive {
     height: 100%;
