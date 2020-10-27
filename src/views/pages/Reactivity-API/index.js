@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-26 15:13:05
- * @LastEditTime: 2020-10-26 16:37:33
+ * @LastEditTime: 2020-10-27 15:30:53
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -58,12 +58,60 @@ export const useState = () => {
       {
         title: 'Refs',
         isCompoents: 'Refs',
-        link: 'https://v3.vuejs.org/api/refs-api.html'
+        link: 'https://v3.vuejs.org/api/refs-api.html',
+        apiList: [
+          {
+            apiTitle: 'ref',
+            descripttion: '接受一个内部值并返回一个响应式且可变的 ref 对象。ref 对象具有指向内部值的单个 property .value'
+          },
+          {
+            apiTitle: 'unref',
+            descripttion: '如果参数为 ref，则返回内部值，否则返回参数本身。这是 val = isRef(val) ? val.value : val'
+          },
+          {
+            apiTitle: 'toRef',
+            descripttion: '可以用来为源响应式对象上的 property 性创建一个 ref。然后可以将 ref 传递出去，从而保持对其源 property 的响应式连接'
+          },
+          {
+            apiTitle: 'toRefs',
+            descripttion: '将响应式对象转换为普通对象，其中结果对象的每个 property 都是指向原始对象相应 property 的ref'
+          },
+          {
+            apiTitle: 'isRef',
+            descripttion: '检查值是否是引用对象'
+          },
+          {
+            apiTitle: 'customRef',
+            descripttion: '创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。它需要一个工厂函数，该函数接收 track 和 trigger 函数作为参数，并应返回一个带有 get 和 set 的对象'
+          },
+          {
+            apiTitle: 'shallowRef',
+            descripttion: '创建一个 ref，它跟踪自己的 .value 更改，但不会使其值成为响应式的'
+          },
+          {
+            apiTitle: 'triggerRef',
+            descripttion: '手动执行与 shallowRef](#shallowref) 关联的任何效果'
+          }
+        ]
       },
       {
         title: 'Computed and watch',
         isCompoents: 'Computed',
-        link: 'https://v3.vuejs.org/api/computed-watch-api.html'
+        link: 'https://v3.vuejs.org/api/computed-watch-api.html',
+        apiList: [
+          {
+            apiTitle: 'computed',
+            descripttion: '使用 getter 函数，并为从 getter 返回的值返回一个不变的响应式 ref 对象.或者，它可以使用具有 get 和 set 函数的对象来创建可写的 ref 对象'
+          },
+          {
+            apiTitle: 'watchEffect',
+            descripttion: '在响应式地跟踪其依赖项时立即运行一个函数，并在更改依赖项时重新运行它'
+          },
+          {
+            apiTitle: 'watch',
+            descripttion: 'watch API 与选项式 API this.$watch (以及相应的 watch 选项) 完全等效。watch 需要侦听特定的 data 源，并在单独的回调函数中副作用。默认情况下，它也是惰性的——即，回调是仅在侦听源发生更改时调用'
+          }
+        ]
       }
     ]
   })
