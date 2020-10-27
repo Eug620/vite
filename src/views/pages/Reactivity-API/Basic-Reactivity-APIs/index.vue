@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-26 15:23:40
- * @LastEditTime: 2020-10-26 16:29:43
+ * @LastEditTime: 2020-10-27 17:50:10
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -18,7 +18,8 @@
 
 <script>
 import { useState } from './index.js'
-export default {
+import { defineComponent } from 'vue'
+export default defineComponent({
   props: {
     item: Object
   },
@@ -27,7 +28,7 @@ export default {
       ...useState(_)
     }
   }
-}
+})
 </script>
 
 <style>

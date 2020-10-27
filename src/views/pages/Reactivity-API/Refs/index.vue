@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-26 15:23:40
- * @LastEditTime: 2020-10-27 16:15:21
+ * @LastEditTime: 2020-10-27 17:49:40
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -21,8 +21,8 @@
 
 <script>
 import { useState } from './index.js'
-import { ref, unref, reactive, toRef, toRefs, isRef, customRef, shallowRef, isReactive, triggerRef, watchEffect } from 'vue';
-export default {
+import { ref, unref, reactive, toRef, toRefs, isRef, customRef, shallowRef, isReactive, triggerRef, watchEffect, defineComponent } from 'vue';
+export default defineComponent({
   props: {
     item: Object
   },
@@ -130,7 +130,7 @@ export default {
       customRef_text: customRef_useDebouncedRef('hello, customRef!')
     }
   }
-}
+})
 </script>
 
 <style>

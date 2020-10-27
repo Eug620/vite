@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-20 10:17:40
- * @LastEditTime: 2020-10-26 16:32:34
+ * @LastEditTime: 2020-10-27 17:48:12
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import { toRefs } from 'vue'
+import { toRefs, defineComponent } from 'vue'
 import { useState, useChangeSetup } from './index'
 import Setup from './setup/index.vue'
 import LifecycleHooks from './lifecycle_hooks/index.vue'
 import ProvideInject from './provide_inject/index.vue'
 import GetCurrentInstance from './getCurrentInstance/index.vue'
-export default {
+export default defineComponent({
   components:{
     Setup,
     LifecycleHooks,
@@ -50,7 +50,7 @@ export default {
       useChangeSetup
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

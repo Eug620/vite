@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-23 10:28:54
- * @LastEditTime: 2020-10-26 16:32:16
+ * @LastEditTime: 2020-10-27 17:49:25
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -19,7 +19,8 @@ import Basic from "./Basic-Reactivity-APIs/index.vue"
 import Refs from "./Refs/index.vue"
 import Computed from "./Computed-and-watch/index.vue"
 import { useState } from "./index.js"
-export default {
+import { defineComponent } from "vue"
+export default defineComponent({
   components: {
     Basic,
     Refs,
@@ -30,7 +31,7 @@ export default {
       ...useState()
     }
   }
-}
+})
 </script>
 
 <style>

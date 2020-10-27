@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-27 16:34:38
+ * @LastEditTime: 2020-10-27 17:44:53
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -59,11 +59,11 @@
   </a-layout>
 </template>
 <script>
-import { toRefs, onMounted, watch } from 'vue'
+import { toRefs, onMounted, watch, defineComponent } from 'vue'
 import { RouterView, RouterLink, useRoute } from 'vue-router'
 import { GithubOutlined, HomeOutlined, MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons-vue'
 import { useState, onCollapse, onBreakpoint, useHandleMenuClick, useHandleMenuSelect, useRouteConfig } from './index.js'
-export default {
+export default defineComponent({
   name: 'home',
   components: {
     RouterLink,
@@ -87,7 +87,7 @@ export default {
       useHandleMenuSelect
     }
   }
-}
+})
 </script>
 
 <style  lang="scss">

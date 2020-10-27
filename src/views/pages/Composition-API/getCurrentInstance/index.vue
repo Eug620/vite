@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-22 14:48:01
- * @LastEditTime: 2020-10-23 15:26:29
+ * @LastEditTime: 2020-10-27 17:48:29
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -19,13 +19,14 @@
 
 <script>
 import { useState } from "./index"
-export default {
+import { defineComponent } from "vue"
+export default defineComponent({
   setup () {
     return {
       ...useState()
     }
   }
-}
+})
 </script>
 
 <style>

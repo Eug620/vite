@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-21 12:27:21
- * @LastEditTime: 2020-10-27 16:32:38
+ * @LastEditTime: 2020-10-27 17:47:46
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -13,9 +13,11 @@
   </eug-card>
 </template>
 <script>
-export default {
+import { defineComponent } from "vue";
 
-}
+export default defineComponent({
+
+})
 </script>
 
 <style>

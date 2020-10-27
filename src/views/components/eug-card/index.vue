@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 12:07:42
- * @LastEditTime: 2020-10-22 16:43:10
+ * @LastEditTime: 2020-10-27 17:45:49
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -21,8 +21,8 @@
 
 <script>
 import { useState } from "./index.js"
-import { toRefs } from "vue";
-export default {
+import { toRefs, defineComponent } from "vue";
+export default defineComponent({
   props: {
     bordered: {
       type: Boolean,
@@ -55,7 +55,7 @@ export default {
         ...toRefs(state)
     }
   }
-}
+})
 </script>
 
 <style lang="scss">

@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-05-27 01:50:14
- * @LastEditTime: 2020-10-19 18:53:39
+ * @LastEditTime: 2020-10-27 17:43:41
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -11,12 +11,13 @@
 
 <script>
 import {RouterLink, RouterView} from 'vue-router';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'App',
   components: {
     RouterLink,
     RouterView
   }
-}
+})
 </script>

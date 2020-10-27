@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-21 12:28:12
- * @LastEditTime: 2020-10-27 16:29:25
+ * @LastEditTime: 2020-10-27 17:46:29
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -14,9 +14,11 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from "vue";
 
-}
+export default defineComponent({
+
+})
 </script>
 
 <style>

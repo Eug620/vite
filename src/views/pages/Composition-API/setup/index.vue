@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-22 14:47:45
- * @LastEditTime: 2020-10-22 16:49:48
+ * @LastEditTime: 2020-10-27 17:49:10
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -30,8 +30,8 @@
 
 <script>
 import { useState, useEmitSetup } from './index.js'
-import { watch, toRefs } from 'vue';
-export default {
+import { watch, toRefs, defineComponent } from 'vue';
+export default defineComponent({
     props: {
       setupProps: String
     },
@@ -56,7 +56,7 @@ export default {
             useEmitSetup
         }
     }
-}
+})
 </script>
 
 <style>

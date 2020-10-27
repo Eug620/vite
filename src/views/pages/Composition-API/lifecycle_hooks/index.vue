@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-22 14:47:56
- * @LastEditTime: 2020-10-23 15:09:49
+ * @LastEditTime: 2020-10-27 17:48:44
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -25,8 +25,8 @@
 
 <script>
 import { useState } from "./index.js"
-import { onBeforeMount, onMounted, onUpdated, onBeforeUnmount, onUnmounted, onErrorCaptured, onRenderTracked, onRenderTriggered } from 'vue'
-export default {
+import { onBeforeMount, onMounted, onUpdated, onBeforeUnmount, onUnmounted, onErrorCaptured, onRenderTracked, onRenderTriggered, defineComponent } from 'vue'
+export default defineComponent({
   setup () {
     onBeforeMount(() => {
       console.log('Lifecycle Hooks --- onBeforeMount')
@@ -56,7 +56,7 @@ export default {
       ...useState()
     }
   }
-}
+})
 </script>
 
 <style>
