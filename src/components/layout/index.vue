@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-19 18:37:30
- * @LastEditTime: 2020-10-23 15:10:46
+ * @LastEditTime: 2020-10-27 16:34:38
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -53,7 +53,7 @@
       </a-layout-content>
       <a-layout-footer style="textAlign: center">
         <!-- Vue3 + vite + Antd -->
-        TEST
+        <a href="https://github.com/Eug620/vite">EUG</a> 
       </a-layout-footer>
     </a-layout>
   </a-layout>

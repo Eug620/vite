@@ -1,12 +1,16 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-10-21 12:25:21
- * @LastEditTime: 2020-10-21 12:25:31
+ * @LastEditTime: 2020-10-27 16:30:51
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 <template>
-  <div>Built-in Components</div>
+  <eug-card>
+    <template #content>
+      Built-in Components
+    </template>
+  </eug-card>
 </template>
 
 <script>
