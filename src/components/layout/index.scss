@@ -5,7 +5,7 @@
     margin: 16px;
   }
   .ant-layout-sider{
-    background-color: #fff;
+    background-color: #fff !important;
   }
   #components-layout-demo-responsive {
     height: 100%;
@@ -14,6 +14,6 @@
     // margin-top: 21px;
     &-msg{
       text-align: left;
-      padding-top: 20px;
+      padding-top: 20px;  
     }
   }
