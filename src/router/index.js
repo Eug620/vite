@@ -121,11 +121,16 @@ const routes = [
         name: 'Composition-API',
         component: defineAsyncComponent(() => import('../views/pages/Composition-API/index.vue'))
       },
+      {
+        path: 'Bulma-Components',
+        name: 'Bulma-Components',
+        component: defineAsyncComponent(() => import('../views/pages/Bulma-Components/index.vue'))
+      }
     ]
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', redirect: '/' } // 找不到路径，重定向到首页
 ]
-  
+
 const router = createRouter({
   // history: createWebHistory(),
   history: createWebHashHistory(), // hash
@@ -137,9 +142,9 @@ const router = createRouter({
         resolve({ left: 0, top: 0 })
       }, 500)
     })
-    
+
     // return desired position
   }
 });
-  
+
 export default router;
