@@ -1,0 +1,1 @@
+let e=document.createElement("style");e.innerHTML="",document.head.appendChild(e);import{d as n,r as t,o as a,c as r,w as s,a as c}from"./index.a8cbfbff.js";var o=n({});const d=c(" Instance Properties ");o.render=function(e,n,c,o,i,l){const u=t("eug-card");return a(),r(u,null,{content:s(()=>[d]),_:1})},o.__file="src/views/pages/Instance-Properties/index.vue";export default o;
