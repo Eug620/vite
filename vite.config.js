@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-10-23 10:28:54
- * @LastEditTime: 2020-10-23 11:36:40
+ * @LastEditTime: 2020-12-14 16:56:35
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -23,6 +23,7 @@ module.exports = {
   proxy: {
     // 如果是 /lsbdb 打头，则访问地址如下
     // '/lsbdb': 'http://10.192.195.96:8087',
+    '/user': 'http://47.93.229.170:3000',
     // 如果是 /lsbdb 打头，则访问地址如下
     // '/lsbdb': {
     //   target: 'http://10.192.195.96:8087/',

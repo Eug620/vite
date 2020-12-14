@@ -1,7 +1,7 @@
 /*
  * @Author: yeyuhang
  * @Date: 2020-11-10 16:57:03
- * @LastEditTime: 2020-11-13 15:23:25
+ * @LastEditTime: 2020-12-14 15:56:45
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
  */
@@ -47,7 +47,11 @@ export const useState = () => {
         // {
         //   label: 'Tabs',
         //   components: 'bulma-tabs'
-        // }
+        // },
+        {
+          label: 'Test',
+          components: 'BulmaTest'
+        },
       ]
     })
     return toRefs(state)

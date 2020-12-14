@@ -1,7 +1,7 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-11-10 16:56:08
- * @LastEditTime: 2020-11-13 15:24:10
+ * @LastEditTime: 2020-12-14 15:58:42
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
@@ -16,7 +16,7 @@
           @prevClick="callback"
           @nextClick="callback"
         >
-          <a-tab-pane style="height: calc(100vh - 270px);overflow:scroll;" v-for="comp in component" :key="comp.label" :tab="comp.label">
+          <a-tab-pane  v-for="comp in component" :key="comp.label" :tab="comp.label">
             <component :is="comp.components"/> 
           </a-tab-pane>
         </a-tabs>
@@ -29,9 +29,11 @@
 import { useState, callback } from './index.js'
 import { defineComponent } from 'vue'
 import BulmaTabs from './common/bulma-tabs/index.vue'
+import BulmaTest from './common/bulma-test/index.vue'
 export default {
   components:{
-    BulmaTabs
+    BulmaTabs,
+    BulmaTest
   },
   setup (_, ctx) {
     return {

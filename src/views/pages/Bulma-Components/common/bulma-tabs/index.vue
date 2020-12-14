@@ -1,12 +1,12 @@
 <!--
  * @Author: yeyuhang
  * @Date: 2020-11-11 15:23:56
- * @LastEditTime: 2020-11-13 16:50:47
+ * @LastEditTime: 2020-12-14 15:59:53
  * @LastEditors: yeyuhang
  * @Descripttion: 头部注释
 -->
 <template>
-  <div class="eug-bulma-tabs">
+  <div class="eug-bulma-tabs" style="height: calc(100vh - 270px);overflow:scroll;">
     <!-- default -->
     <bulma-card :title="`default------active: ${defaults}`">
       <template #content>
